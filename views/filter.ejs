@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Events</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        form {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+        
+        select, input {
+            padding: 5px;
+            margin: 5px 0;
+        }
+        
+        button {
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Filter Events</h1>
+    <form action="/filter" method="POST">
+        <label for="type">Type:</label>
+        <select id="type" name="type" required>
+            <option value="wedding">Wedding</option>
+            <option value="birthday">Birthday</option>
+            <option value="parties">Parties</option>
+            <option value="babyshowers">Baby Showers</option>
+        </select>
+        <br>
+        <label for="budget">Budget:</label>
+        <select id="budget" name="budget" required>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        <br>
+        <label for="decoration">Decoration:</label>
+        <select id="decoration" name="decoration" required>
+            <option value="none">None</option>
+            <option value="floral">Floral</option>
+            <option value="indoor">Indoor</option>
+            <option value="outdoor">Outdoor</option>
+        </select>
+        <br>
+        <button type="submit">Apply Filters</button>
+    </form>
+</body>
+</html>
